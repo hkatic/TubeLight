@@ -1,0 +1,13 @@
+<resources>
+	<string name="app_name">Tube Light</string>
+	<string name="type_your_search_term_here">Type your search term here</string>
+	<string name="search">Search</string>
+	<string name="rewind">Rewind</string>
+	<string name="play">Play</string>
+	<string name="pause">Pause</string>
+	<string name="fast_forward">Fast forward</string>
+	<string name="play_from_beginning">Play from beginning</string>
+	<string name="end">End.</string>
+	<string name="from_channel">From channel %1$s</string>
+	<string name="published_at">Published at %1$s</string>
+</resources>

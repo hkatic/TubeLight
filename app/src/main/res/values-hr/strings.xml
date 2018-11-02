@@ -1,0 +1,13 @@
+<resources>
+	<string name="app_name">Tube Light</string>
+	<string name="type_your_search_term_here">Ovdje upišite što želite tražiti</string>
+	<string name="search">Traži</string>
+	<string name="rewind">Premotaj natrag</string>
+	<string name="play">Pokreni</string>
+	<string name="pause">Pauza</string>
+	<string name="fast_forward">Premotaj naprijed</string>
+	<string name="play_from_beginning">Vrati na početak</string>
+	<string name="end">Kraj.</string>
+	<string name="from_channel">Sa kanala %1$s</string>
+	<string name="published_at">Datum objave %1$s</string>
+</resources>

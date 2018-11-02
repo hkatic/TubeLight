@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="@dimen/main_padding"
+		tools:context=".view.MainActivity">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/search_for_edit_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="start"
+				android:hint="@string/type_your_search_term_here"
+				android:imeOptions="actionSearch"
+				android:inputType="text"
+				android:visibility="gone" />
+
+			<Button
+				android:id="@+id/search_button"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				android:text="@string/search" />
+		</LinearLayout>
+
+		<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+			android:id="@+id/swipe_container"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/search_results_recycler_view"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+	</LinearLayout>
+</layout>

@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+	compileSdkVersion 28
+	buildToolsVersion '28.0.3'
+	dataBinding {
+		enabled = true
+	}
+	defaultConfig {
+		applicationId "com.hrvojekatic.tubelight"
+		minSdkVersion 17
+		targetSdkVersion 28
+		versionCode 1
+		versionName "1.0"
+		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+	}
+	buildTypes {
+		debug {
+			buildConfigField 'String', "YoutubeApiKey", tubelight_YoutubeApiKey
+		}
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			buildConfigField 'String', "YoutubeApiKey", tubelight_YoutubeApiKey
+		}
+	}
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {
+	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	implementation 'androidx.appcompat:appcompat:1.0.0'
+	implementation 'androidx.recyclerview:recyclerview:1.0.0'
+	implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+	implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
+	implementation 'com.google.code.gson:gson:2.8.2'
+	implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+	implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+	implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
+	testImplementation 'junit:junit:4.12'
+	androidTestImplementation 'androidx.test:runner:1.1.0-beta02'
+	androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
+}
